@@ -1,0 +1,23 @@
+# Скомпилированные программы и артефакты сборки
+/depviz
+*.exe
+*.out
+*.test
+bin/
+dist/
+coverage.*
+
+# Сгенерированные диаграммы
+*.svg
+*.png
+
+# Служебные файлы macOS
+.DS_Store
+
+# Настройки IDE и редакторов
+.idea/
+.vscode/
+*.swp
+
+# Личные заметки для Claude Code
+CLAUDE.md
