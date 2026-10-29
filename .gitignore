@@ -21,3 +21,8 @@ coverage.*
 
 # Личные заметки для Claude Code
 CLAUDE.md
+AGENTS.md
+
+# Гайды
+guides/
+
