@@ -21,6 +21,9 @@ const DefaultDepth = 3
 // minDepth — наименьшая допустимая глубина анализа.
 const minDepth = 1
 
+// noExtraArgs — допустимое число аргументов без флага.
+const noExtraArgs = 0
+
 // namePattern описывает допустимое имя пакета pip.
 var namePattern = regexp.MustCompile(
 	`^[A-Za-z0-9]([A-Za-z0-9._-]*[A-Za-z0-9])?$`)
@@ -45,7 +48,7 @@ func Parse(args []string) (Config, error) {
 		}
 		return Config{}, fmt.Errorf("неверные аргументы: %w", err)
 	}
-	if rest := flags.Args(); len(rest) > 0 {
+	if rest := flags.Args(); len(rest) > noExtraArgs {
 		return Config{}, fmt.Errorf("лишние аргументы без флага: %s",
 			strings.Join(rest, " "))
 	}
